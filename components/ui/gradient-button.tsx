@@ -28,11 +28,10 @@ const gradientButtonVariants = cva(
   }
 )
 
-export interface GradientButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof gradientButtonVariants> {
-  asChild?: boolean
-}
+export type GradientButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
+  VariantProps<typeof gradientButtonVariants> & {
+    asChild?: boolean
+  }
 
 const GradientButton = React.forwardRef<HTMLButtonElement, GradientButtonProps>(
   ({ className, variant, asChild = false, ...props }, ref) => {

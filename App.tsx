@@ -1,6 +1,8 @@
 
 import React from 'react';
 import { motion } from "framer-motion";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import { Gallery4 } from "@/components/ui/gallery4";
 import { InfiniteTextMarquee } from "@/components/ui/infinite-text-marquee";
@@ -25,7 +27,7 @@ export default function App() {
       title: "Payroll Management Services",
       description: "Monthly Payroll Processing, Bonus & Incentives, Gratuity & Leave Encashment, Analytics & Reporting.",
       href: "#",
-      image: "https://images.unsplash.com/photo-1554224155-984067941b71?q=80&w=2072&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2072&auto=format&fit=crop"
     },
     {
       id: "statutory",
@@ -120,6 +122,10 @@ export default function App() {
 
   return (
     <div className="min-h-screen font-sans bg-neutral-950 text-white relative">
+      {/* Vercel Analytics & Speed Insights */}
+      <Analytics />
+      <SpeedInsights />
+
       {/* Global Background Pattern */}
       <div 
         className="fixed inset-0 pointer-events-none opacity-20 z-0" 
@@ -185,7 +191,7 @@ export default function App() {
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
               Complete HR & <br />
-              <Highlight className="text-white text-2xl md:text-4xl lg:text-5xl">Compliance Solutions</Highlight>
+              <Highlight className="text-white text-4xl md:text-6xl lg:text-7xl">Compliance Solutions</Highlight>
             </h1>
             <p className="text-lg md:text-xl text-neutral-300 mb-8 max-w-2xl mx-auto">
               From Onboarding to Offboarding – We Manage It All. Focus on growth while we handle people operations with precision.
